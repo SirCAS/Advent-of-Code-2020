@@ -1,22 +1,22 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using Shared;
 
 namespace Day01
 {
     public class ExpenseCalculator
     {
-        public (int, int) Locate(IEnumerable<int> expenses)
+        public int Magic(IEnumerable<int> expenses, int matchesToFind)
         {
-            foreach (var expense1 in expenses)
+            var mutations = expenses.GetPermutations(matchesToFind);
+            foreach (var mutation in mutations)
             {
-                foreach (var expense2 in expenses)
-                {
-                    if (expense1 + expense2 == 2020)
-                        return (expense1, expense2);
-                }
+                if(mutation.Sum() == 2020)
+                    return mutation.Aggregate(1, (a, b) => a * b);
             }
             
-            throw new ArgumentException("No valid expenses to locate");
+            throw new ArgumentException("Couldn't find any expenses which matches criteria");
         }
     }
 }

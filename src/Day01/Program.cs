@@ -10,8 +10,12 @@ namespace Day01
         {
             var expenses = File.ReadAllLines("input.txt").Select(int.Parse);
             var expenseCalculator = new ExpenseCalculator();
-            var match = expenseCalculator.Locate(expenses);
-            Console.WriteLine(match.Item1 * match.Item2);
+            
+            // Part 1
+            Console.WriteLine(expenseCalculator.Magic(expenses, 2));
+            
+            // Part 2
+            Console.WriteLine(expenseCalculator.Magic(expenses, 3));
         }
     }
 }
