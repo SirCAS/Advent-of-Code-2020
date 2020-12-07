@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using Day04.Validation;
 
 namespace Day04
 {

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using Day03.Test;
 
 namespace Day03
 {

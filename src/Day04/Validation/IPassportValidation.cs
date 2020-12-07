@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Day04
+namespace Day04.Validation
 {
     public interface IPassportValidation
     {

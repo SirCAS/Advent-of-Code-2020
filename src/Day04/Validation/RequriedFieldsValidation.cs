@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Day04
+namespace Day04.Validation
 {
     public class RequriedFieldsValidation : IPassportValidation
     {

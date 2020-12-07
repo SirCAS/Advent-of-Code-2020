@@ -1,3 +1,4 @@
+using Day04.Validation;
 using NUnit.Framework;
 
 namespace Day04.Test

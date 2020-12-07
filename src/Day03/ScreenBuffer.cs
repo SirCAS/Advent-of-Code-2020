@@ -1,6 +1,6 @@
 using System;
 
-namespace Day03.Test
+namespace Day03
 {
     public class ScreenBuffer
     {

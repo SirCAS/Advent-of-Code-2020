@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace Day04
+namespace Day04.Validation
 {
     public class ValidValueValidation : IPassportValidation
     {

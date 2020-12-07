@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace Day06.Test
+namespace Day06
 {
     public class DeclarationFormAnalyzer
     {
