@@ -11,10 +11,9 @@ namespace Day07
             
             var parser = new BagRuleParser();
             var parsedRules = parser.Parse(rules);
-            
-            var evaluator = new BagRuleEvaluator(parsedRules);
 
-            Console.WriteLine(evaluator.GetContained());
+            Console.WriteLine(new BagRuleEvaluator(parsedRules).CountBagsWithAtLeastOne("shiny gold"));
+            Console.WriteLine(new BagCalculator(parsedRules).CountBags("shiny gold"));
         }
     }
 }

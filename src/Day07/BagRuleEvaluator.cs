@@ -12,23 +12,23 @@ namespace Day07
             _lookup = lookup;
         }
 
-        public int GetContained()
+        public int CountBagsWithAtLeastOne(string desiredColor)
         {
             return _lookup.Count(rule =>
             {
-                return rule.Value.Any(test => GetContained(test.Key));
+                return rule.Value.Any(test => GetContained(desiredColor, test.Key));
             });
         }
 
-        private bool GetContained(string targetBag)
+        private bool GetContained(string desiredColor, string targetBag)
         {
-            if (targetBag == "shiny gold")
+            if (targetBag == desiredColor)
                 return true;
 
             if (!_lookup.ContainsKey(targetBag))
                 return false;
 
-            return _lookup[targetBag].Any(x => GetContained(x.Key));
+            return _lookup[targetBag].Any(x => GetContained(desiredColor,x.Key));
         }
     }
 }
